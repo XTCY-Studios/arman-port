@@ -1,0 +1,230 @@
+@charset "utf-8";
+/*======================================
+
+ [ -Main Stylesheet-
+  Theme: Bloom - intro
+  Version: 1.0
+  Last change: 07/02/2017 ]
+*/
+/*-------------Import fonts ---------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Ek+Mukta:200,300,400,500,600,700,800&subset=devanagari,latin-ext');
+/*-------------General Style---------------------------------------*/
+html{
+	overflow-x:hidden !important;
+	height:100%;
+}
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Ek Mukta', sans-serif;
+	font-weight: 400;
+	font-size: 12px;
+	color: #fff;
+	background: #161616;
+	height:100%;
+	text-align:center;
+}
+@-o-viewport {width: device-width;}
+@-ms-viewport {width: device-width;}
+@viewport {width: device-width;}
+/*--------------Typography--------------------------------------*/
+h2 {
+	font-size: 3.2em;
+	font-weight: 300;
+}
+h3 {
+	font-size: 1em;
+}
+/* ---------Page preload--------------------------------------*/
+ 
+/* ---------Content Styles--------------------------------------*/
+#main{
+	height:100%;
+	width:100%;
+	position: absolute  ;
+	top:0;
+	left:0;
+	z-index:2;
+	color: #fff;
+	background: #161616;
+	text-align:center;
+}
+#main:before {
+	content:'';
+	position: fixed;
+	top:50px;
+	left:50px;
+	bottom:50px;
+	right:50px;
+	background:#292929;
+}
+.bg {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-size: cover;
+	background-attachment: scroll  ;
+	background-position: center  ;
+	background-repeat:repeat;
+	background-origin: content-box;
+	-webkit-transform: translate3d(0,0,0);
+}
+.logo-holder {
+	position:absolute;
+	top:90px;
+	width:100%;
+	z-index:12;
+}
+.logo-holder h2 {
+	color:rgba(255,255,255,0.51);
+	font-weight:900;
+	font-size:96px;
+	letter-spacing:26px;
+	line-height:96px;
+}
+.logo-holder h3 {
+    font-family: 'Playfair+Display', serif;
+    font-style: italic;
+	color:#fff;
+	font-size:18px;
+}
+.overlay {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:#000;
+	opacity:0.4;
+	z-index:2;
+	-webkit-transform: translate3d(0,0,0);
+}
+.over-bg {
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:#fff;
+	opacity:0.2;
+	z-index:3
+}
+.overlay.white-overlay{
+	background:#fff;
+	opacity:0.3;
+}
+.version-wrap {
+	position: relative;
+	margin-top:250px;
+	width:100%;
+	float:left;
+	z-index:3;
+}
+.version-inner {
+	max-width:1000px;
+	width:82%;
+	margin:50px auto 70px;
+	position:relative;
+	overflow:hidden;
+	border-radius:10px;
+	z-index:1;
+} 
+.version-inner img {
+	width:100%;
+	height:auto;
+}
+.dark-ver {
+	position:absolute;
+	z-index:2;
+	right:0;
+	top:0;
+	opacity:0;
+	visibility:hidden;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.vis-dark {
+	opacity:1;
+	visibility: visible;
+}
+.ver-link {
+	position:absolute;
+	top:50%;
+	left:0;
+	width:100%;
+	z-index:5;
+}
+.ver-link:before {
+	content:'';
+	position:absolute;
+	left:50%;
+	width:1px;
+	height:90px;
+	background:#fff;
+	top:50%;
+	margin-top:-55px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.ver-link a {
+	width:50%;
+	float:left;
+	text-align: center;
+	font-size:15px;
+	font-weight:500;
+	color:#fff;
+	transition: all 0.2s ease-in-out;
+	position:relative;
+	top:-12px;
+ 
+}
+.ver-link a span {
+	padding:10px 30px;
+	background:#292929;
+	color:#fff;
+ 
+	position:relative;
+}
+.ver-link a.drt span{
+	background:#fff;
+	color:#000;
+}
+.ver-link a:hover {
+	opacity:0.6;
+}
+.notifer {
+	float:left;
+	width:100%;
+	text-align:center;
+    font-family: 'Playfair+Display', serif;
+	font-style:italic;
+	color:#fff;
+	margin-bottom:50px;
+}
+.notifer a {
+	color:rgba(255,255,255,0.51);
+}  
+@media only screen and  (max-width: 1036px) {
+.logo-holder h2 {
+	font-size:76px;
+	line-height:76px;
+}
+.version-wrap {
+	margin-top:190px;
+}
+}
+@media only screen and  (max-width: 736px) {
+.logo-holder h2 {
+	font-size:76px;
+}
+.version-wrap {
+	margin-top:180px;
+} 
+}
+@media only screen and  (max-width: 540px) {
+.logo-holder h2 {
+	font-size:56px;
+}
+}
